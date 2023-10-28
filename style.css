@@ -1,0 +1,16 @@
+.js-container {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  border: none;
+}
+
+.cell {
+  background-color: blueviolet;
+  height: 25px;
+  width: 25px;
+  border: none;
+  margin: 0;
+}
