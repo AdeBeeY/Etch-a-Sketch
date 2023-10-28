@@ -4,4 +4,12 @@ const containerElement = document.querySelector('.js-container');
     const cellElement = document.createElement('div');
     cellElement.classList.add('cell');
     containerElement.appendChild(cellElement);
+
+    cellElement.addEventListener('mouseenter', () => {
+      cellElement.style.backgroundColor = 'black';
+    });
+  
+    cellElement.addEventListener('mouseleave', () => {
+      cellElement.style.backgroundColor = 'yellow';
+    });
   };
