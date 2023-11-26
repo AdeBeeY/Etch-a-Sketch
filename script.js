@@ -8,11 +8,13 @@ function generateGrid(row, column) {
     containerElement.appendChild(cellElement);
   
     cellElement.addEventListener('mouseenter', () => {
-      cellElement.style.backgroundColor = 'black';
+      let randomColour = getRandomColour();
+      cellElement.style.backgroundColor = randomColour;
     });
   
     cellElement.addEventListener('mouseleave', () => {
-      cellElement.style.backgroundColor = 'yellow';
+      let randomColour = getRandomColour();
+      cellElement.style.backgroundColor = randomColour;
     });
   };
   containerElement.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
@@ -38,3 +40,10 @@ btnElement.addEventListener('click', () => {
     alert('Please, enter a positive number');
   }
 });
+
+function getRandomColour() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+};
